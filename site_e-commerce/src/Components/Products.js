@@ -1,4 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 const dummyProducts = [
     {
@@ -15,20 +17,22 @@ const dummyProducts = [
         price: "$25.00",
         imageUrl: "path_to_image2.jpg"
     },
+    {
+        id: 3,
+        name: "Vintage Toy 3",
+        description: "A popular toy from the 80s.",
+        price: "$30.00",
+        imageUrl: "path_to_image3.jpg"
+    }
 ];
 
 const Products = (props) => {
-
-    // get first two products and pass them to parent component 
-    useEffect(() => {
-        const firstTwoProducts = dummyProducts.slice(0, 2); // get first two products
-        props.getFeaturedProducts(firstTwoProducts); // pass first two products to parent component
-    }, []);
     
     return (
         <div className="container mt-5">
+            <Navbar />
             <h1>Products</h1>
-            <div className="row">
+            <div className="product-list">
                 {dummyProducts.map(product => (
                     <div key={product.id} className="col-md-4">
                         <div className="card mb-4">
@@ -42,6 +46,7 @@ const Products = (props) => {
                     </div>
                 ))}
             </div>
+            < Footer />
         </div>
     );
 }

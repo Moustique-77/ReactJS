@@ -1,0 +1,52 @@
+.carousel {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 2rem 0;
+}
+
+.slide {
+    /* Dimensions fixes pour chaque diapositive du carrousel */
+    width: 100%; /* ou une largeur fixe comme 600px si vous préférez */
+    height: 400px; /* ou la hauteur que vous préférez */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* cache les parties de l'image qui dépassent */
+}
+
+.carousel-image {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover; /* redimensionne et rogne l'image pour remplir le conteneur */
+    display: block;
+}
+
+.slide.active {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}

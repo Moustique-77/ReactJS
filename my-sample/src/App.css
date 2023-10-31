@@ -36,3 +36,45 @@
     transform: rotate(360deg);
   }
 }
+
+.film-review {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.film-review img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.film-review h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.film-review h2 {
+  font-size: 1.5em;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.film-review p {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.film-review em {
+  font-style: italic;
+  color: #444;
+}
+

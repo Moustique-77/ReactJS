@@ -44,6 +44,7 @@ function TodoList() {
         ))}
       </ul>
         <p><b>{tasksDoneCount}</b> tâche(s) terminée(s)</p>
+        <br />
       <Footer />
     </div>
   );
